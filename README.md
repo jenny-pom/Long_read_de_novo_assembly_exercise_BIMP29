@@ -114,6 +114,7 @@ time multiqc Results/ -o Results/multiqc_report
 ```
 - Time taken: 0m5.987s
 - Notes:
+--------------------------------------------
 
 
 
