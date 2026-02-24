@@ -1,0 +1,5 @@
+Data/
+*.fastq
+*.fastq.gz
+*.sra
+*.bam
