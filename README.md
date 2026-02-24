@@ -14,22 +14,36 @@ The goal is to assemble the genome and evaluate its completeness using BUSCO.
 
 ## Process Log
 ### Step 1: Preperation
+- **Date:** 2026-02-24
+### Step 1: Preparation
 - **Date:** 2026-02-24  
-Make project directory with data, result and script folders.  
-Initiate github connection by running following commands:
-´´´bash
-git init # sets up a hidden .git folder  
-git remote add origin https://github.com/jenny-pom/Long_read_de_novo_assembly_exercise_BIMP29.git  
-git remote -v # Show me exactly which web address I am connected to.  
+
+First, I created the project directory structure including `Data/`, `results/`, and `scripts/` folders. 
+
+Next, I initiated the GitHub connection and linked the local server to the remote repository:
+
+```bash
+git init 
+git remote add origin [https://github.com/jenny-pom/Long_read_de_novo_assembly_exercise_BIMP29.git](https://github.com/jenny-pom/Long_read_de_novo_assembly_exercise_BIMP29.git)  
+git remote -v # used to verify the connection to the correct GitHub URL
+```
+
+Then, I staged the folders and pushed them to the main branch:
+
+```bash
 git add .  
 git commit -m "Initial commit of directory structure"  
-git push -u origin main --force # This sends everything that was included in the add . to GitHub. The --force label was added because I had some problem with a README file that I had created and removed in my directory before running git init  
-git status # Check that everything worked, shows which files are "Untracked" (in red) or  "Staged" (in green)
-nano .gitignore # create gitignore and add /Data and *.fastq  so that the big datafile isn't pushed to github  
+git push -u origin main --force # The --force flag was used to overwrite the existing remote history caused by the initial README conflict.
+```
+Finally, I checked the repository status and set up the .gitignore to prevent large sequence files from being uploaded.
+
+```bash
+git status
+nano .gitignore
 git add .gitignore  
 git commit -m "Added gitignore to protect against large data uploads"  
-git push  
-´´´
+git push
+```
 
 ### Step 2: Assembly
 - **Date:** 2026-02-24
@@ -37,6 +51,7 @@ git push
 
 ### Step 1: Validation
 - **Date:** 2026-02-24
+
 
 
 
